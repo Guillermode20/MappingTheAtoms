@@ -144,8 +144,6 @@ const MapComponent = memo(function MapComponent({ isFullscreen }) {
     map.createPane('markers');
     map.getPane('markers').style.zIndex = 650;
 
-    // Remove the scale control code that was here
-
     mapInstance.current = map;
 
     L.tileLayer(TILE_LAYER_URL, {
@@ -214,11 +212,8 @@ const MapComponent = memo(function MapComponent({ isFullscreen }) {
     if (reactor && mapInstance.current) {
       mapInstance.current.flyTo([reactor.Latitude, reactor.Longitude], 10, { duration: 1 });
       setSelectedReactors([reactor]);
-      // Remove the line that opens the modal
-      // setIsModalOpen(true);
     }
   };
-
 
   const handleBackClick = () => {
     if (mapInstance.current) {
