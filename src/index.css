@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Mona Sans', sans-serif;
+}
+
+/* Add these new styles */
+.leaflet-container {
+  background-color: #18181b !important;
+}
+
+.dark-tiles {
+  filter: brightness(1) contrast(1) saturate(1);
+}
+
+.leaflet-control-scale {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.leaflet-control-scale-line {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(24, 24, 27, 0.8);
+}
+
+.leaflet-control-attribution {
+  background-color: rgba(24, 24, 27, 0.8) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.leaflet-control-attribution a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Add country border styles */
+.leaflet-overlay-pane svg path {
+  stroke: rgba(255, 255, 255, 0.6) !important;
+  stroke-width: 1px;
+  fill: none;
+  pointer-events: none;
+}
